@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Items</h2>
+<a href="{% url 'create_item' %}">Create New Item</a>
+<ul>
+    {% for item in items %}
+    <li>
+        <a href="{% url 'item_detail' item.pk %}">{{ item.name }}</a>
+        <a href="{% url 'update_item' item.pk %}">Edit</a>
+        <a href="{% url 'delete_item' item.pk %}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
