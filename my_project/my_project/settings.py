@@ -82,7 +82,7 @@ DATABASES = {
             'ENGINE': 'django.db.backends.mysql',
         'NAME': 'my_database',  # Replace with your database name
         'USER': 'root',         # Replace with your MySQL username
-        'PASSWORD': 'Timothy@2020', # Replace with your MySQL password
+        'PASSWORD': '******', # Replace with your MySQL password
         'HOST': 'localhost',
         'PORT': '3306',
     }
