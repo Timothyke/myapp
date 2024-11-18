@@ -1,8 +1,22 @@
 from django.shortcuts import render
 
-# Create your views here.
 from .models import Item
-from django.http import HttpResponse
+from django.http import HttpResponsefrom django.contrib.auth.models import User
+from rest_framework import viewsets
+from .models import Product
+from .serializers import UserSerializer, ProductSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+# Product ViewSet
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+
+
 
 # List View
 def item_list(request):
